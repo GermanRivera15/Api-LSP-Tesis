@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Category extends Model
 {
     use HasFactory;
-    protected $table = 'user';
-    protected $fillable = ['Code','Name','Email','Rol','Active'];
+    protected $table = 'category';
+    protected $fillable = ['Code','Type','UrlImage','CodeDictionary','Vigente'];
     public $primaryKey = 'Code';
     public $timestamps = false;
 }

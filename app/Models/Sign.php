@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Sign extends Model
 {
     use HasFactory;
-    protected $table = 'user';
-    protected $fillable = ['Code','Name','Email','Rol','Active'];
+    protected $table = 'sign';
+    protected $fillable = ['Code','Title','Description','UrlImage','CodeCategory','Vigente'];
     public $primaryKey = 'Code';
     public $timestamps = false;
 }
