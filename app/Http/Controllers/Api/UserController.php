@@ -20,7 +20,7 @@ class UserController extends Controller
         $consulta->Name = $request->Name;
         $consulta->Email = $request->Email;
         $consulta->Rol = $request->Rol;
-        $consulta->Active = $request->Active;
+        $consulta->Vigente = $request->Vigente;
 
         $consulta->save();
     }

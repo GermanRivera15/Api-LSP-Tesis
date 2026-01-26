@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('Name',150)->unique();
             $table->string('Email',100)->unique();
             $table->string('Rol',15);
-            $table->boolean('Active')->default(true);
+            $table->boolean('Vigente')->default(true);
         });
     }
 
