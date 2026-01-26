@@ -42,6 +42,7 @@ Route::controller(CategoryController::class)->group(function (){
     Route::get('/categories','ListCategories');
     Route::get('/categories-vigentes','ListCategoriesVigentes');
     Route::get('/category-code/{Code}','CategoryForCode');
+    Route::get('/category-type/{Type}','CategoryForType');
     Route::get('/categories-dictionary/{Code}','ListCategoriesForCodeDictionary');
     Route::post('/category-add','AddCategory');
     Route::put('/category-update/{Code}','UpdateCategory');

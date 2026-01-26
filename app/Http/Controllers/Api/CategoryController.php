@@ -69,6 +69,24 @@ class CategoryController extends Controller
         }
     }
 
+    public function CategoryForType($Type)
+    {
+      $data=array();
+        try
+        {
+          $consulta = Category::select('category.Code','category.Type',
+          'category.UrlImage','category.CodeDictionary','category.Vigente')
+          ->where('category.Type', '=', $Type)
+          ->get();
+          return response($consulta);
+        }
+        catch (\Exception $ex) 
+        {
+            $data = $ex->getMessage();
+            return response($data, 400);
+        }
+    }
+
     public function AddCategory(Request $request)
     {
         $consulta = new Category();
